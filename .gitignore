@@ -1,48 +1,47 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# Node dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+# Build outputs
+build/
+dist/
 
-# Configuration
-wp-config.php
+# Vite cache
+.vite/
 
-# Example themes
-/wp-content/themes/twenty*/
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Example plugin
-/wp-content/plugins/hello.php
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# Uploads
-/wp-content/uploads/
+# OS files
+.DS_Store
+Thumbs.db
 
-# Log files
+# TypeScript cache
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# WordPress temporary files
 *.log
+*.bak
+*.zip
+*.tar.gz
+*.sql
 
-# htaccess
-/.htaccess
-
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# Tailwind output (if you ever output temp CSS)
+*.css.map
